@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Dia da Semana</th>
+        <th scope="col">Horário</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let disciplina of listItems; index as i">
+        <th scope="row">
+          <a [routerLink]="['/list', i]">{{ disciplina.id }}</a>
+        </th>
+        <td>{{ disciplina.nome }}</td>
+        <td>{{ disciplina.dia }}</td>
+        <td>{{ disciplina.horario }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
